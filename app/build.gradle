@@ -39,7 +39,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.2.0'
+        kotlinCompilerExtensionVersion '1.4.3'
     }
     packagingOptions {
         resources {
@@ -49,13 +49,14 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':domain')
     implementation Libs.Android.CoreKtx
     implementation Libs.Android.LifecycleRuntimeKtx
     implementation Libs.Android.ActivityCompouse
     implementation Libs.Android.CompouseUI
     implementation Libs.Android.CompousePreview
     implementation Libs.Android.CompouseMaterial
-    implementation Libs.Android.AppCompat
+
 
     //hilt dagger
 

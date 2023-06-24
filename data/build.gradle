@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -35,7 +36,7 @@ dependencies {
 
     implementation Libs.Android.Room
     implementation Libs.Android.RoomKtx
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation Libs.Android.CoreKtx
     implementation Libs.JetBrains.Coroutines
     implementation Libs.Google.Hilt
     implementation Libs.Google.HiltCompiler

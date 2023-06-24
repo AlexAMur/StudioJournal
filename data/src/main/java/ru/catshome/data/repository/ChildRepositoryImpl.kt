@@ -4,8 +4,10 @@ import kotlinx.coroutines.flow.Flow
 import ru.catshome.data.repository.storage.room.DAO.ChildDao
 import ru.catshome.studiojournal.domain.models.Child
 import ru.catshome.studiojournal.domain.repository.ChildRepository
+import javax.inject.Inject
 
-class ChildRepositoryImpl (val childDao: ChildDao): ChildRepository {
+
+class ChildRepositoryImpl @Inject constructor(val childDao: ChildDao): ChildRepository {
     override fun saveChild(child: Child) {
         childDao.insertChild(child)
     }
