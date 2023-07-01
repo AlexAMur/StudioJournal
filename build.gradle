@@ -1,4 +1,6 @@
 buildscript {
+
+   
     ext {
         compose_ui_version = '1.4.3'
         coroutine_version = '1.6.4'
@@ -13,7 +15,7 @@ buildscript {
                         ActivityCompouse: 'androidx.activity:activity-compose:1.7.2',
                         CompouseUI: "androidx.compose.ui:ui:$compose_ui_version",
                         CompousePreview: "androidx.compose.ui:ui-tooling-preview:$compose_ui_version",
-                        CompouseMaterial: 'androidx.compose.material:material:1.2.0',
+                        CompouseMaterial3: 'androidx.compose.material3:material3:1.1.1',
                         AppCompat: 'androidx.appcompat:appcompat:1.6.1'
 
                 ],
@@ -21,6 +23,7 @@ buildscript {
                         Coroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
                 ],
                 Google:[
+                        Material: 'com.google.android.material:material:1.9.0',
                         Hilt: "com.google.dagger:hilt-android:$hilt_version",
                         HiltCompiler: "com.google.dagger:hilt-compiler:$hilt_version"
                 ]

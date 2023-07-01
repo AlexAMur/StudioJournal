@@ -28,6 +28,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -55,9 +56,8 @@ dependencies {
     implementation Libs.Android.ActivityCompouse
     implementation Libs.Android.CompouseUI
     implementation Libs.Android.CompousePreview
-    implementation Libs.Android.CompouseMaterial
-
-
+    implementation Libs.Android.CompouseMaterial3
+    implementation Libs.Google.Material
     //hilt dagger
 
     implementation Libs.Google.Hilt
