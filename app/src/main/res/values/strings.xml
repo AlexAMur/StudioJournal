@@ -6,6 +6,8 @@
     <string name="enter_brith">Дата рождения</string>
     <string name="enter_note">Заметки</string>
 
+    <string name="enter_group">Название группы</string>
+
 
     <string name="btn_save">Сохранить</string>
     <string name="btn_cancel">Отменить</string>

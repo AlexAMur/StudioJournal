@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 
 class ChildRepositoryImpl @Inject constructor(val childDao: ChildDao): ChildRepository {
-    override fun saveChild(child: Child) {
+    override fun saveChild(child: Child){
         childDao.insertChild(child)
     }
 
@@ -16,11 +16,11 @@ class ChildRepositoryImpl @Inject constructor(val childDao: ChildDao): ChildRepo
         TODO("Not yet implemented")
     }
 
-    override fun loadChildByID() {
+    override fun loadChildByID(uid: Long): Flow<Child> {
         TODO("Not yet implemented")
     }
 
-    override fun loadChildByGroup() {
+    override fun loadChildByGroup(uid: Long): Flow<List<Child>> {
         TODO("Not yet implemented")
     }
 

@@ -15,12 +15,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import dagger.hilt.android.AndroidEntryPoint
-import ru.catshome.studiojournal.ui.addChild
+import ru.catshome.studiojournal.ui.ChildViewModel
+import ru.catshome.studiojournal.ui.addGroup
+import ru.catshome.studiojournal.ui.newChildScreen
+import ru.catshome.studiojournal.ui.newGroupScreen
 import ru.catshome.studiojournal.ui.theme.StudioJournalTheme
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    private val mainViewModel by viewModels<MainViewModel>()
+   // private val mainViewModel by viewModels<MainViewModel>()
+   // @Inject lateinit var childViewModel: ChildViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -29,9 +34,10 @@ class MainActivity : ComponentActivity() {
             // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                   // color = MaterialTheme.colors.background
+
                 ) {
-                 addChild()
+                 //   newChildScreen(childViewModel)
+                    newGroupScreen()
                 }
             }
         }

@@ -16,7 +16,10 @@ buildscript {
                         CompouseUI: "androidx.compose.ui:ui:$compose_ui_version",
                         CompousePreview: "androidx.compose.ui:ui-tooling-preview:$compose_ui_version",
                         CompouseMaterial3: 'androidx.compose.material3:material3:1.1.1',
-                        AppCompat: 'androidx.appcompat:appcompat:1.6.1'
+                        AppCompat: 'androidx.appcompat:appcompat:1.6.1',
+                        MaterialIconsExtended:  'androidx.compose.material:material-icons-extended',
+                        LifecycleViewModelCompouse: "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1",
+
 
                 ],
                 JetBrains:[

@@ -51,6 +51,7 @@ android {
 
 dependencies {
     implementation project(path: ':domain')
+
     implementation Libs.Android.CoreKtx
     implementation Libs.Android.LifecycleRuntimeKtx
     implementation Libs.Android.ActivityCompouse
@@ -58,6 +59,8 @@ dependencies {
     implementation Libs.Android.CompousePreview
     implementation Libs.Android.CompouseMaterial3
     implementation Libs.Google.Material
+    implementation Libs.Android.MaterialIconsExtended
+    implementation Libs.Android.LifecycleViewModelCompouse
     //hilt dagger
 
     implementation Libs.Google.Hilt

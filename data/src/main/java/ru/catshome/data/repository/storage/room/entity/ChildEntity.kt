@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName = "childs")
 data class ChildEntity(
     @PrimaryKey(autoGenerate = true) val uid: Long,
     @ColumnInfo(name = "fam") val childFam: String?,
