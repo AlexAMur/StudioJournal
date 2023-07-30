@@ -1,10 +1,49 @@
 buildscript {
+
+   
     ext {
-        compose_ui_version = '1.2.0'
+        compose_ui_version = '1.4.3'
+        coroutine_version = '1.6.4'
+        hilt_version = '2.47'
+        room_version ='2.5.1'
+        lifecycle_version ='2.6.1'
+        Libs = [
+                Android:[
+
+                        LifecycleRuntimeCompose: "androidx.lifecycle:lifecycle-runtime-compose: $lifecycle_version",
+                        LifecycleRuntimeKtx: "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version",
+                        LifecycleViewModelKtx: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+                        LifecycleViewModelCompose: "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version",
+                        LifecycleViewModelSavedState: "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version",
+
+                        Room: "androidx.room:room-runtime: $room_version",
+                        RoomKtx: "androidx.room:room-ktx:$room_version",
+                        CoreKtx: "androidx.core:core-ktx:1.9.0",
+
+                        ActivityCompouse: 'androidx.activity:activity-compose:1.7.2',
+                        CompouseUI: "androidx.compose.ui:ui:$compose_ui_version",
+                        CompousePreview: "androidx.compose.ui:ui-tooling-preview:$compose_ui_version",
+                        CompouseMaterial3: 'androidx.compose.material3:material3:1.1.1',
+                        AppCompat: 'androidx.appcompat:appcompat:1.6.1',
+                        MaterialIconsExtended:  'androidx.compose.material:material-icons-extended',
+
+                ],
+                JetBrains:[
+                        Coroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
+                ],
+                Google:[
+                        Material: 'com.google.android.material:material:1.9.0',
+                        Hilt: "com.google.dagger:hilt-android:$hilt_version",
+                        HiltCompiler: "com.google.dagger:hilt-compiler:$hilt_version"
+                ]
+        ]
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id 'com.android.application' version '7.4.0' apply false
-    id 'com.android.library' version '7.4.0' apply false
-    id 'org.jetbrains.kotlin.android' version '1.7.0' apply false
+    id 'com.android.application' version '8.0.2' apply false
+    id 'com.android.library' version '8.0.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.10' apply false
+    id 'org.jetbrains.kotlin.jvm' version '1.8.10' apply false
+    id 'com.google.dagger.hilt.android' version '2.47' apply false
+
 }
