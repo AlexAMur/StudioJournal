@@ -151,10 +151,10 @@ fun listGroup(content: List<Group>,  modifier: Modifier){
 @Composable
 fun listRow(model: String) {
     Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
-        Image(painter = painterResource(id =  R.drawable.ic_group_foreground),
+       /* Image(painter = painterResource(id =  R.drawable.ic_group_foreground),
             contentScale = ContentScale.Crop,
             modifier = Modifier.size(50.dp),
-            contentDescription = "")
+            contentDescription = "")*/
         Text(text = model, modifier = Modifier.padding(10.dp),
             fontSize =24.sp  //MaterialTheme.typography.bodyLarge
         )

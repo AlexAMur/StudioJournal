@@ -13,6 +13,7 @@ import ru.catshome.data.repository.GroupRepositoryImpl
 import ru.catshome.data.repository.storage.room.AppDatabase
 import ru.catshome.data.repository.storage.room.DAO.ChildDao
 import ru.catshome.data.repository.storage.room.DAO.GroupDao
+import ru.catshome.studiojournal.domain.repository.ChildRepository
 import ru.catshome.studiojournal.domain.repository.GroupRepository
 import javax.inject.Singleton
 
@@ -43,5 +44,8 @@ class DataModule {
     }
     @Provides
     @Singleton
-    fun provideChildRepository(childDao: ChildDao) =ChildRepositoryImpl(childDao)
+    fun provideChildRepository(childDao: ChildDao):ChildRepository{
+        return ChildRepositoryImpl(childDao)
+    }
+
 }

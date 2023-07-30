@@ -67,9 +67,9 @@ fun newChildContent(child: Child ) {
                                 fontSize = 16.sp)
                 })
         }
-        OutlinedTextField(value = child.Note,
+        OutlinedTextField(value = child.note,
                     label = { Text(stringResource(R.string.enter_note)) },
-                    onValueChange = { child.Note = it },
+                    onValueChange = { child.note = it },
                     modifier = modifier
                         .safeDrawingPadding()
                         .imePadding()
