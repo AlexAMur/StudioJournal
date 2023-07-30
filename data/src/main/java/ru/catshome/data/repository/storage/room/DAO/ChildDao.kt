@@ -8,12 +8,14 @@ import ru.catshome.studiojournal.domain.models.Child
 @Dao
 interface ChildDao {
     @Insert(onConflict =  OnConflictStrategy.REPLACE)
-    fun insertChild(child: Child)
+    suspend fun insertChild(child: ChildEntity)
     @Delete
-    fun deleteChild(vararg childs: Child)
-    @Query("Select * from childs ")
-    fun loadAllChild(): Flow<List<Child>>
+    fun deleteChild(vararg childs: ChildEntity)
+    @Query("Select * from children")
+    fun loadAllChild(): Flow<List<ChildEntity>>
 
-    @Query("Select * from childs where uid = :uid")
-    fun loadChildByID(uid: Long): Flow<List<Child>>
-}
+    @Query("Select * from children where uid = :uid")
+    fun loadChildByID(uid: Long): Flow<ChildEntity>
+
+    @Query("Select * from children where uid = :uid_group")
+    fun loadChildByGroup(uid_group: Long): Flow<List<ChildEntity>>}

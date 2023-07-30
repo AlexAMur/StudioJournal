@@ -25,7 +25,8 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
    // private val mainViewModel by viewModels<MainViewModel>()
-   // @Inject lateinit var childViewModel: ChildViewModel
+  //  @Inject lateinit var childViewModel: ChildViewModel
+    @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -36,8 +37,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
 
                 ) {
-                 //   newChildScreen(childViewModel)
-                    newGroupScreen()
+                    newChildScreen()
+                 //   newGroupScreen()
                 }
             }
         }

@@ -1,9 +1,9 @@
 package ru.catshome.studiojournal.domain.models
 
 data class Child (
-    val uid: Long =-1,
-    val childFam: String?="",
-    val childName: String,
-    val brith: Long = 0,
-    val Note: String?="",
+    val uid: Long =0,
+    var childFam: String="",
+    var childName: String ="",
+    val birth: Long = 0,
+    var note: String="",
     )

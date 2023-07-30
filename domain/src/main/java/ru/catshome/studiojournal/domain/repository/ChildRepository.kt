@@ -4,9 +4,9 @@ import kotlinx.coroutines.flow.Flow
 import ru.catshome.studiojournal.domain.models.Child
 
 interface ChildRepository {
-    fun saveChild(child: Child)
-    fun removeChild()
+    suspend fun saveChild(child: Child)
+    fun removeChild(child: Child)
     fun loadChildByID(uid :Long): Flow<Child>
-    fun loadChildByGroup(uid: Long): Flow<List<Child>>
+    fun loadChildByGroup(uid_group: Long): Flow<List<Child>>
     suspend fun loadAllChild(): Flow<List<Child>>
 }
