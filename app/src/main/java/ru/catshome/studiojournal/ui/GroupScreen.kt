@@ -2,36 +2,27 @@ package ru.catshome.studiojournal.ui
 
 import android.annotation.SuppressLint
 import android.util.Log
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.magnifier
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
 import ru.catshome.studiojournal.R
 import ru.catshome.studiojournal.domain.models.Group
@@ -41,7 +32,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class GroupViewModal @Inject constructor(val  saveGroupUseCase: SaveGroupUseCase,
-                                         val loadGroupUseCase: LoadGroupUseCase): ViewModel(){
+                                         val loadGroupUseCase: LoadGroupUseCase)
+: ViewModel(){
     private var _listGroup = MutableStateFlow(listOf<Group>())
      var listGroup: StateFlow<List<Group>> =_listGroup
 
@@ -53,7 +45,7 @@ class GroupViewModal @Inject constructor(val  saveGroupUseCase: SaveGroupUseCase
     }
     fun loadList(){
         viewModelScope.launch {
-            loadGroupUseCase.loadAllGroup().collect{
+           loadGroupUseCase.loadAllGroup().collect{
                 _listGroup.value = it
                 Log.e("AAA","load list $it",)
             }
@@ -75,7 +67,8 @@ class GroupViewModal @Inject constructor(val  saveGroupUseCase: SaveGroupUseCase
 }
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun newGroupScreen(groupViewModal: GroupViewModal = viewModel()) {
+fun groupScreen( groupViewModal: GroupViewModal) {
+
     val group by groupViewModal.nameGroup.collectAsStateWithLifecycle()
     val listGroup by groupViewModal.listGroup.collectAsStateWithLifecycle()
 

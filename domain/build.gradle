@@ -1,9 +1,10 @@
 plugins {
 
     id 'java-library'
-    id 'org.jetbrains.kotlin.jvm'
-  //  id 'kotlin-kapt'
-
+    id 'kotlin'
+//    id 'org.jetbrains.kotlin.jvm'
+    id 'kotlin-kapt'
+   //id 'com.google.dagger.hilt.android'
 }
 
 java {
@@ -14,6 +15,6 @@ java {
 dependencies{
 
     implementation Libs.JetBrains.Coroutines
-
+//    implementation Libs.Google.Hilt
 
 }

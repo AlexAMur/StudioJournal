@@ -12,4 +12,15 @@
     <string name="btn_save">Сохранить</string>
     <string name="btn_cancel">Отменить</string>
 
+
+    //----------------NavGraph------------------------------------------------
+    <string name="children">Дети</string>
+    <string name="groups">Группы</string>
+    <string name="rates">Тарифы</string>
+    <string name="visits">Визит</string>
+    <string name="pays">Платежи</string>
+    <string name="rate">Тарифы</string>
+    //--------------------------------------------------------
+
+
 </resources>

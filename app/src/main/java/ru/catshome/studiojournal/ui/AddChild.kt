@@ -20,9 +20,15 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
 import ru.catshome.studiojournal.domain.models.Child
 import javax.inject.Inject
 
+
+@Composable
+fun ChildContent(navController: NavHostController){
+    Text(text = "Child")
+}
 @ExperimentalMaterial3Api
 @Composable
 fun newChildScreen(childViewModel: ChildViewModel = viewModel()){

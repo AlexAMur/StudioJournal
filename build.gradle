@@ -7,6 +7,8 @@ buildscript {
         hilt_version = '2.47'
         room_version ='2.5.1'
         lifecycle_version ='2.6.1'
+        nav_version = '2.6.0'
+        hilt_nav_compose = '1.0.0'
         Libs = [
                 Android:[
 
@@ -26,6 +28,8 @@ buildscript {
                         CompouseMaterial3: 'androidx.compose.material3:material3:1.1.1',
                         AppCompat: 'androidx.appcompat:appcompat:1.6.1',
                         MaterialIconsExtended:  'androidx.compose.material:material-icons-extended',
+                        Navigation: "androidx.navigation:navigation-compose:$nav_version",
+                        HiltNavCompose:"androidx.hilt:hilt-navigation-compose:$hilt_nav_compose"
 
                 ],
                 JetBrains:[

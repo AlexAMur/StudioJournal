@@ -9,22 +9,18 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import dagger.hilt.android.AndroidEntryPoint
-import ru.catshome.studiojournal.ui.ChildViewModel
-import ru.catshome.studiojournal.ui.addGroup
-import ru.catshome.studiojournal.ui.newChildScreen
-import ru.catshome.studiojournal.ui.newGroupScreen
+import ru.catshome.studiojournal.ui.GroupViewModal
+import ru.catshome.studiojournal.ui.StudioApp
+import ru.catshome.studiojournal.ui.groupScreen
 import ru.catshome.studiojournal.ui.theme.StudioJournalTheme
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-   // private val mainViewModel by viewModels<MainViewModel>()
+     //@Inject lateinit var vm: GroupViewModal
   //  @Inject lateinit var childViewModel: ChildViewModel
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,10 +31,12 @@ class MainActivity : ComponentActivity() {
             // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-
+                    color = MaterialTheme.colorScheme.background
                 ) {
-                    newChildScreen()
-                 //   newGroupScreen()
+                    //groupScreen()
+                    //StudioApp(groupViewModal = vm)
+                    StudioApp()
+
                 }
             }
         }

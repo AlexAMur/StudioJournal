@@ -75,9 +75,12 @@ dependencies {
     implementation Libs.Android.LifecycleRuntimeKtx
     implementation Libs.Android.LifecycleViewModelCompose
     implementation Libs.Android.LifecycleViewModelSavedState
+    implementation Libs.Android.Navigation
 //------------------hilt dagger-------------------------------------
     implementation Libs.Google.Hilt
     kapt Libs.Google.HiltCompiler
+//----------nav---------------
+    implementation Libs.Android.HiltNavCompose
 //------------------------------------------------------------
     implementation project(path: ':data')
     testImplementation 'junit:junit:4.13.2'
